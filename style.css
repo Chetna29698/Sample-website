@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    padding-left: 50px;
+}
+
+.logo:hover {
+    color: skyblue;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.nav-links li {
+    margin-left: 100px;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+}
+
+.nav-links a:hover::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 28px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    padding-right: 50px;
+}
+
+@media (max-width: 960px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 200px;
+        line-height: 40px;
+        font-size: 50px;
+        transition: max-height 10s ease-in-out;
+        max-height: 0;
+        overflow-y: hidden;
+    }
+
+    .nav-links li a {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nav-links.active {
+        display: flex;
+        max-height: none;
+        background-color: whitesmoke;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .nav-links {
+        padding-left: 150px;
+    }
+}
+
+@media (max-width: 580px) {
+    .nav-links {
+        padding-left: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        padding-left: 80px;
+    }
+}
+
+@media (max-width: 250px) {
+    .nav-links {
+        display: none;
+
+    }
+
+}
+
+/* ================================================home div==================================================== */
+
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    /* margin: auto; */
+}
+
+.slideshow-container img {
+    height: 600px;
+    width: 100%;
+}
+
+
+.mySlides h1 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 400px;
+    width: 100%;
+    text-align: center;
+}
+.mySlides h1:hover{
+    color: brown;
+}
+
+.mySlides p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: absolute;
+    bottom: 230px;
+    left: 200px;
+    right: 200px;
+    text-align: justify;
+}
+
+.mySlides button {
+    background-color: black;
+    border-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 15px 20px 15px 20px;
+    position: absolute;
+    bottom: 120px;
+    right: 700px;
+   
+}
+.mySlides button:hover {
+    background-color: transparent;
+    border-color: white;
+    border-style: solid;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/* =========================================================about us=========================== */
+
+#about {
+    height: 530px;
+    width: 100%;
+    /* background-color: antiquewhite; */
+    margin-top: 20px;
+}
+
+#about #content {
+    height: 530px;
+    width: 50%;
+    /* background-color: rgb(231, 134, 7); */
+    float: left;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#about #content h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    padding-top: 50px;
+}
+
+#about #content h2:hover {
+    color: saddlebrown;
+}
+
+#about #content p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding-top: 30px;
+    text-align: justify;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+
+#about #content ul {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    font-size: 16px;
+    padding-top: 30px;
+    text-align: justify;
+    padding-left: 180px;
+    padding-right: 70px;
+    margin-left: 130px;
+}
+
+#about #content ul li {
+    padding-bottom: 18px;
+    line-height: 20px;
+}
+
+#about #img {
+    height: 530px;
+    width: 50%;
+    /* background-color: rgb(198, 223, 7); */
+    float: right;
+}
+
+#about #img #about-img {
+    height: 480px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 70px;
+    padding-top: 20px;
+    overflow: hidden;
+    transition: 1s all linear;
+}
+
+#about #img #about-img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ==============================================contactus===================================== */
+#contact {
+    height: 600px;
+    width: 100%;
+    /* background-color: rgb(255, 236, 127); */
+    background-image: url(images/home2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact #form {
+    height: 580px;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.447);
+    padding-left: 30px;
+    padding-top: 40px;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+#contact #form h3 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#contact #form h3:hover {
+    color: brown;
+}
+
+#contact #form .lname {
+    font-size: 22px;
+    padding-bottom: 50px;
+}
+
+#contact #form #name {
+    padding: 5px 30px 5px 30px;
+}
+
+#contact #form #name:focus {
+    border: 2px solid black;
+}
+
+#contact #form .lmail {
+    font-size: 22px;
+    padding-bottom: 50px;
+}
+
+#contact #form #mail {
+    padding: 5px 30px 5px 30px;
+}
+
+#contact #form #mail:focus {
+    border: 2px solid black;
+}
+
+#contact #form .lmsg {
+    font-size: 22px;
+    padding-bottom: 50px;
+}
+
+#contact #form #msg {
+    padding: 5px 30px 5px 30px;
+}
+
+#contact #form #msg:focus {
+    border: 2px solid black;
+}
+
+#contact #form .btn-submit {
+    margin-left: 150px;
+    margin-top: 25px;
+    padding: 10px 30px 10px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+}
+
+#contact #form .btn-submit:hover {
+    color: black;
+    background-color: transparent;
+    border: 2px solid black;
+
+}
+
+/* ===============================================map===================================== */
+
+#map {
+    height: 500px;
+    width: 100%;
+    /* background-color: thistle; */
+    margin-top: 15px;
+}
+
+#map #google-map {
+    height: 500px;
+    width: 50%;
+    /* background-color: rgb(224, 76, 91); */
+    float: left;
+}
+
+#map #contact-info {
+    height: 500px;
+    width: 50%;
+    background-color: rgba(52, 51, 51, 0.677);
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 70px;
+
+}
+
+#map #contact-info .address h2 {
+    color: rgb(174, 61, 61);
+    font-size: 30px;
+}
+
+#map #contact-info .address .fa-location-dot {
+    font-size: 25px;
+    padding-right: 15px;
+    color: white;
+}
+
+#map #contact-info .address pre {
+    color: white;
+    font-size: 18px;
+    padding-left: 60px;
+}
+
+
+#map #contact-info .email h2 {
+    color: rgb(174, 61, 61);
+    font-size: 30px;
+    padding-right: 70px;
+}
+
+#map #contact-info .email .fa-envelope {
+    font-size: 25px;
+    padding-right: 15px;
+    color: white;
+}
+
+#map #contact-info .email pre {
+    color: white;
+    font-size: 18px;
+    padding-left: 45px;
+}
+
+#map #contact-info .call h2 {
+    color: rgb(174, 61, 61);
+    font-size: 30px;
+    padding-right: 90px;
+}
+
+#map #contact-info .call .fa-phone {
+    font-size: 25px;
+    padding-right: 15px;
+    color: white;
+}
+
+#map #contact-info .call pre {
+    color: white;
+    font-size: 18px;
+    padding-left: 40px;
+}

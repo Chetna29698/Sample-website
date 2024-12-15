@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Sample Website</title>
+
+</head>
+
+<body>
+  <!-- ==================================header============================== -->
+  <header>
+    <div class="logo">Raymond</div>
+    <nav>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =========================================home div============================ -->
+
+  <a name="home"></a>
+  <!-- <div class="home">
+    <img src="images/home3.jpg" alt="">
+    <div class="text">
+      <h1>Welcome to Our Website</h1>
+      <p>As a group, Raymond is involved in numerous businesses and has a portfolio of well-known brands in Textiles,
+        Apparel, Denim, Consumer Care, Engineering and Real Estate.
+        The Raymond Group endeavours to uplift the community at large with a vision for high-quality education that
+        meets the educational requirements of today’s children by imparting the necessary skills and knowledge.
+        Committed to bringing about significant improvement in the quality of life in rural areas, the JK Trust has now
+        grown into a comprehensive rural development organization focusing on agriculture, animal husbandry, rural
+        livelihoods, skill development, education, women empowerment, natural resource management & environmental
+        sustainability.
+      </p>
+      <button onclick="window.location.href = 'https://perspectiwitty.com/';" id="home-btn">Learn More</button>
+    </div>
+  </div> -->
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+     
+      <img src="images/home2.jpg" >
+      <h1>Welcome to Our Website</h1>
+      <p>As a group, Raymond is involved in numerous businesses and has a portfolio of well-known brands in Textiles,
+        Apparel, Denim, Consumer Care, Engineering and Real Estate.
+        The Raymond Group endeavours to uplift the community at large with a vision for high-quality education that
+        meets the educational requirements of today’s children by imparting the necessary skills and knowledge.
+        Committed to bringing about significant improvement in the quality of life in rural areas, the JK Trust has now
+        grown into a comprehensive rural development organization focusing on agriculture, animal husbandry, rural
+        livelihoods, skill development, education, women empowerment, natural resource management & environmental
+        sustainability.
+      </p>
+      <button onclick="window.location.href = 'https://perspectiwitty.com/';" id="home-btn">Learn More</button>
+    </div>
+    
+    <div class="mySlides fade">
+      
+      <img src="images/home3.jpg" >
+      <h1>Welcome to Our Website</h1>
+      <p>As a group, Raymond is involved in numerous businesses and has a portfolio of well-known brands in Textiles,
+        Apparel, Denim, Consumer Care, Engineering and Real Estate.
+        The Raymond Group endeavours to uplift the community at large with a vision for high-quality education that
+        meets the educational requirements of today’s children by imparting the necessary skills and knowledge.
+        Committed to bringing about significant improvement in the quality of life in rural areas, the JK Trust has now
+        grown into a comprehensive rural development organization focusing on agriculture, animal husbandry, rural
+        livelihoods, skill development, education, women empowerment, natural resource management & environmental
+        sustainability.
+      </p>
+      <button onclick="window.location.href = 'https://perspectiwitty.com/';" id="home-btn">Learn More</button>
+    </div>
+    
+    <div class="mySlides fade">
+      
+      <img src="images/home4.jpg" >
+      <h1>Welcome to Our Website</h1>
+      <p>As a group, Raymond is involved in numerous businesses and has a portfolio of well-known brands in Textiles,
+        Apparel, Denim, Consumer Care, Engineering and Real Estate.
+        The Raymond Group endeavours to uplift the community at large with a vision for high-quality education that
+        meets the educational requirements of today’s children by imparting the necessary skills and knowledge.
+        Committed to bringing about significant improvement in the quality of life in rural areas, the JK Trust has now
+        grown into a comprehensive rural development organization focusing on agriculture, animal husbandry, rural
+        livelihoods, skill development, education, women empowerment, natural resource management & environmental
+        sustainability.
+      </p>
+      <button onclick="window.location.href = 'https://perspectiwitty.com/';" id="home-btn">Learn More</button>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+
+
+  <!-- ===============================================About div=============================================== -->
+  <a name="about"></a>
+  <div id="about">
+    <div id="content">
+      <h2>About Us</h2>
+      <p>Raymond is a diversified group with majority business interests in Textile & Apparel sectors and a presence
+        across varying segments such as Consumer Care, Realty and Engineering in national and international
+        markets.Raymond Limited was first incorporated as the Raymond Woolen Mill in 1925 near Thane Creek. Lala
+        Kailashpat Singhania took over The Raymond Woolen Mill in the year 1944.
+      </p>
+
+      <ul>
+        <li>In the year 2000, Mr Gautam Singhania was appointed Chairman and Managing Director of Raymond Limited.</li>
+        <li>In 2015, Raymond became the first textile company in the world to produce Super 250s and innovative fabrics.
+        </li>
+        <li>Raymond with its 97-year-old expertise is a textile powerhouse with modern infrastructure and strong
+          fibre-to-fabric manufacturing capabilities. </li>
+      </ul>
+
+    </div>
+    <div id="img">
+      <img src="images/home2.jpg" alt="" id="about-img">
+    </div>
+  </div>
+
+  <!-- ===========================================contact us form===================================== -->
+  <a name="contact"></a>
+  <div id="contact">
+    <form id="form">
+      <h3>Get In Touch</h3><br>
+      <label for="name" class="lname">Name</label><br><br>
+      <input type="text" name="name" id="name"  pattern="[A-Za-z]" maxlength="32" placeholder="Enter the name"><br><br>
+
+      <label for="mail" class="lmail">Email</label><br><br>
+      <input type="email" name="mail" id="mail" pattern="[^ @]*@[^ @]*" placeholder="Enter the email"><br><br>
+
+      <label for="msg" class="lmsg">Message</label><br><br>
+      <textarea name="msg" id="msg" cols="30" rows="6" placeholder="Message"></textarea><br><br>
+
+      <button class="btn-submit">Submit</button>
+    </form>
+  </div>
+
+
+  <!-- ============================================map and contact info=========================================== -->
+
+  <div id="map">
+    <div id="google-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60282.901422803196!2d72.89354345820315!3d19.209115699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b914fe186931%3A0xde2bcbac688da751!2sThe%20Raymond%20Shop!5e0!3m2!1sen!2sin!4v1732881568146!5m2!1sen!2sin"
+        width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div id="contact-info">
+      <div class="address">
+        <h2><i class="fa-solid fa-location-dot"></i>Where to find us</h2><br>
+        <pre>Thane West,Mumbai-
+        400606
+        </pre><br>
+      </div>
+      <div class="email">
+        <h2><i class="fa-solid fa-envelope"></i>Email us at</h2><br>
+        <pre>raymond@gmail.com
+        </pre><br>
+      </div>
+      <div class="call">
+        <h2><i class="fa-solid fa-phone"></i>Call us at</h2><br>
+        <pre>+91-1234567890
+        </pre><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===============================================script file name========================================================== -->
+  <script src="script.js"></script>
+</body>
+
+</html>
